@@ -11,5 +11,5 @@ This repository contains babushka configuration management files which sets up a
 ```
 -  Install Babushka (https://github.com/benhoskings/babushka)
 ```
-   sudo sh -c "``curl https://babushka.me/up``"
+   sudo sh -c "`curl https://babushka.me/up`"
 ```
