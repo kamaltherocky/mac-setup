@@ -2,6 +2,10 @@
 
 This repository contains babushka configuration management files which sets up all the software and tools in Mac OSX
 
+## Configuration Management
+we are using Babushka for the configuration management. Here are few reference articles
+- https://thoughtworks.github.io/p2/issue08/babushka/
+
 ## Prerequisite step
 
 -  Install XCode from AppStore
