@@ -13,3 +13,11 @@ This repository contains babushka configuration management files which sets up a
 ```
    sudo sh -c "`curl https://babushka.me/up`"
 ```
+- Generate the ssh keys and add the keys in SSH Settings
+```
+   ssh-keygen -t rsa -b 4096 -C "Kamal"
+```
+- Configure the Name and email address in the git configuration
+```
+   git config --global --edit
+```
