@@ -1,6 +1,18 @@
 # OS-X Applications
 # Install all the apps using HomeBrew Cask
 
+
+# 1Password - Password Management
+dep "1Password" do
+	met? {
+		shell? "brew cask list 1password"
+	}
+
+	meet {
+		shell("brew cask install 1password")
+	}
+end
+
 # iTerm - Terminal Emulator - https://www.iterm2.com
 dep "iTerm2" do
 	met? {
@@ -20,6 +32,17 @@ dep "Google Chrome" do
 
         meet {
                 shell("brew cask install google-chrome")
+        }
+end
+
+# Mozilla Firefox
+dep "Mozilla Firefox" do
+        met? {
+                shell? "brew cask list firefox"
+        }
+
+        meet {
+                shell("brew cask install firefox")
         }
 end
 
@@ -68,15 +91,60 @@ dep "VirtualBox" do
         }
 end
 
+# Skype - Video Chat
+dep "Skype" do
+        met? {
+                shell? "brew cask list skype"
+        }
+
+        meet {
+                shell("brew cask install skype")
+        }
+end
+
+# Google Drive - Google Storage
+dep "Google Drive" do
+        met? {
+                shell? "brew cask list google-drive"
+        }
+
+        meet {
+                shell("brew cask install google-drive")
+        }
+end
+
+# Dropbox - Dropbox Storage
+dep "Dropbox" do
+        met? {
+                shell? "brew cask list dropbox"
+        }
+
+        meet {
+                shell("brew cask install dropbox")
+        }
+end
+
 dep "osx-apps-all" do
+
+	# --------------- Storage Managers ------------------------#
+	requires "Google Drive"
+	requires "Dropbox"
+
+	# --------------- Password Manager ------------------------#
+	requires "1Password"
+
 	# --------------- Terminal / CLI ------------------------#
 	requires "iTerm2"
 
-	# --------------- Text Editors ------------------------#
+	# --------------- Text Editors / IDE ------------------------#
 	requires "Atom"
 
 	# --------------- Browsers ------------------------#
 	requires "Google Chrome"
+	requires "Mozilla Firefox"
+
+	# --------------- Communications ------------------------#
+	requires "Skype"
 
 	# --------------- Virtualization ------------------------#
 	requires "VirtualBox"
