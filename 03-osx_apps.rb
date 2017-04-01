@@ -57,6 +57,17 @@ dep "Docker for Mac" do
         }
 end
 
+# VirtualBox
+dep "VirtualBox" do
+        met? {
+                shell? "brew cask list virtualbox"
+        }
+
+        meet {
+                shell("brew cask install virtualbox")
+        }
+end
+
 dep "osx-apps-all" do
 	# --------------- Terminal / CLI ------------------------#
 	requires "iTerm2"
@@ -66,6 +77,9 @@ dep "osx-apps-all" do
 
 	# --------------- Browsers ------------------------#
 	requires "Google Chrome"
+
+	# --------------- Virtualization ------------------------#
+	requires "VirtualBox"
 
 	# --------------- Docker Ecosystem ------------------------#
 	requires "Docker Toolbox"
