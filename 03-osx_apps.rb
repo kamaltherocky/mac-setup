@@ -158,6 +158,17 @@ dep "Kindle" do
         }
 end
 
+# JetBrains ToolBox - Toolbox to manage other IDE's
+dep "Jetbrains Toolbox" do
+        met? {
+                shell? "brew cask list jetbrains-toolbox"
+        }
+
+        meet {
+                shell("brew cask install jetbrains-toolbox")
+        }
+end
+
 # Box Notes - Collabrative Note taking app
 dep "Box Notes.app" do
 				source "https://e3.boxcdn.net/box-installers/boxnotes/mac/latest/Box%20Notes.zip"
@@ -181,6 +192,7 @@ dep "osx-apps-all" do
 
 	# --------------- Text Editors / IDE ------------------------#
 	requires "Atom"
+	requires "Jetbrains Toolbox"
 
 	# --------------- Browsers ------------------------#
 	requires "Google Chrome"
@@ -199,5 +211,5 @@ dep "osx-apps-all" do
 
 	# --------------- Notes App ------------------------#
 	requires "Box Notes.app"
-	
+
 end
