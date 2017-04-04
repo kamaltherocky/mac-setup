@@ -1,8 +1,9 @@
 # OS-X Applications
 # Install all the apps using HomeBrew Cask
+# if not available in Cask, then use the native install
 
 
-# 1Password - Password Management
+# 1Password - Password Management - https://1password.com/features/
 dep "1Password" do
 	met? {
 		shell? "brew cask list 1password"
@@ -102,6 +103,17 @@ dep "Skype" do
         }
 end
 
+# Slack - Collabrative Chat
+dep "Slack" do
+        met? {
+                shell? "brew cask list slack"
+        }
+
+        meet {
+                shell("brew cask install slack")
+        }
+end
+
 # Google Drive - Google Storage
 dep "Google Drive" do
         met? {
@@ -124,7 +136,38 @@ dep "Dropbox" do
         }
 end
 
+# Overdrive - Audio / Video Borrowing
+dep "Overdrive" do
+        met? {
+                shell? "brew cask list overdrive-media-console"
+        }
+
+        meet {
+                shell("brew cask install overdrive-media-console")
+        }
+end
+
+# Kindle - Audio Books
+dep "Kindle" do
+        met? {
+                shell? "brew cask list kindle"
+        }
+
+        meet {
+                shell("brew cask install kindle")
+        }
+end
+
+# Box Notes - Collabrative Note taking app
+dep "Box Notes.app" do
+				source "https://e3.boxcdn.net/box-installers/boxnotes/mac/latest/Box%20Notes.zip"
+end
+
 dep "osx-apps-all" do
+
+	# --------------- Books -----------------------------------#
+	requires "Overdrive"
+	requires "Kindle"
 
 	# --------------- Storage Managers ------------------------#
 	requires "Google Drive"
@@ -145,6 +188,7 @@ dep "osx-apps-all" do
 
 	# --------------- Communications ------------------------#
 	requires "Skype"
+	requires "Slack"
 
 	# --------------- Virtualization ------------------------#
 	requires "VirtualBox"
@@ -152,4 +196,8 @@ dep "osx-apps-all" do
 	# --------------- Docker Ecosystem ------------------------#
 	requires "Docker Toolbox"
 	requires "Docker for Mac"
+
+	# --------------- Notes App ------------------------#
+	requires "Box Notes.app"
+	
 end

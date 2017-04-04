@@ -6,6 +6,11 @@ dep "tree.bin" do
 	installs "tree"
 end
 
+dep "wget.bin" do
+	installs "wget"
+end
+
 dep "tools-all" do
 	requires "tree.bin"
+	requires "wget.bin"
 end
