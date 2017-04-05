@@ -169,12 +169,54 @@ dep "Jetbrains Toolbox" do
         }
 end
 
+# Spectacle - Window Manager for Mac - https://www.spectacleapp.com/
+dep "Spectacle" do
+        met? {
+                shell? "brew cask list spectacle"
+        }
+
+        meet {
+                shell("brew cask install spectacle")
+        }
+end
+
+# Gisto - Snippet Manager - http://www.gistoapp.com/
+dep "Gisto" do
+        met? {
+                shell? "brew cask list gisto"
+        }
+
+        meet {
+                shell("brew cask install gisto")
+        }
+end
+
+# Java SDK
+dep "Java SDK" do
+        met? {
+                shell? "brew cask list java"
+        }
+
+        meet {
+                shell("brew cask install java")
+        }
+end
+
 # Box Notes - Collabrative Note taking app
 dep "Box Notes.app" do
 				source "https://e3.boxcdn.net/box-installers/boxnotes/mac/latest/Box%20Notes.zip"
 end
 
 dep "osx-apps-all" do
+
+	# --------------- Programming Languages -----------------------------------#
+	requires "Java SDK"
+
+	# --------------- Window Manager -----------------------------------#
+	requires "Spectacle"
+
+	# --------------- Snippet Manager -----------------------------------#
+	requires "Gisto"
 
 	# --------------- Books -----------------------------------#
 	requires "Overdrive"

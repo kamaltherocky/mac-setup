@@ -19,9 +19,27 @@ dep "zsh-completions.bin" do
 	installs "zsh-completions"
 end
 
+# Z - https://github.com/rupa/z
+dep "z.bin" do
+	installs "z"
+end
+# Golang
+dep "go.bin" do
+	installs "go"
+end
+
+# jenv - Java Environment Manager
+dep "jenv.bin" do
+	installs "jenv"
+end
+
+
 dep "tools-all" do
 	requires "tree.bin"
 	requires "wget.bin"
 	requires "zsh.bin"
-	requires "zsh-completions.bin"
+#	requires "zsh-completions.bin"
+#	requires "z.bin"
+	requires "go.bin"
+	requires "jenv.bin"
 end
