@@ -36,6 +36,17 @@ dep "Google Chrome" do
         }
 end
 
+# Google Cloud SDK
+dep "Google Cloud SDK" do
+        met? {
+                shell? "brew cask list google-cloud-sdk"
+        }
+
+        meet {
+                shell("brew cask install google-cloud-sdk")
+        }
+end
+
 # Mozilla Firefox
 dep "Mozilla Firefox" do
         met? {
@@ -191,6 +202,17 @@ dep "Gisto" do
         }
 end
 
+# Vagrant - VM Manager
+dep "Vagrant" do
+        met? {
+                shell? "brew cask list vagrant"
+        }
+
+        meet {
+                shell("brew cask install vagrant")
+        }
+end
+
 # Java SDK
 dep "Java SDK" do
         met? {
@@ -208,6 +230,9 @@ dep "Box Notes.app" do
 end
 
 dep "osx-apps-all" do
+
+	# --------------- Cloud Tools -----------------------------------#
+	requires "Google Cloud SDK"
 
 	# --------------- Programming Languages -----------------------------------#
 	requires "Java SDK"
@@ -246,6 +271,7 @@ dep "osx-apps-all" do
 
 	# --------------- Virtualization ------------------------#
 	requires "VirtualBox"
+	requires "Vagrant"
 
 	# --------------- Docker Ecosystem ------------------------#
 	requires "Docker Toolbox"

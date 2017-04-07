@@ -33,6 +33,45 @@ dep "jenv.bin" do
 	installs "jenv"
 end
 
+# Hashicorp tools - Terraform
+dep "terraform.bin" do
+	installs "terraform"
+end
+
+# Hashicorp tools - Consul
+dep "consul.bin" do
+	installs "consul"
+end
+
+# Hashicorp tools - Consul Template
+dep "consul-template.bin" do
+	installs "consul-template"
+end
+
+# Hashicorp tools - Packer
+dep "packer.bin" do
+	installs "packer"
+end
+
+# Hashicorp tools - Nomad
+dep "nomad.bin" do
+	installs "nomad"
+end
+
+# Hashicorp tools - Vault
+dep "vault.bin" do
+	installs "vault"
+end
+
+# jq - json parser and formatter - https://stedolan.github.io/jq/
+dep "jq.bin" do
+	installs "jq"
+end
+
+# httpie - commandline http client - https://httpie.org/
+dep "http.bin" do
+	installs "httpie"
+end
 
 dep "tools-all" do
 	requires "tree.bin"
@@ -42,4 +81,15 @@ dep "tools-all" do
 #	requires "z.bin"
 	requires "go.bin"
 	requires "jenv.bin"
+
+	requires "terraform.bin"
+	requires "consul.bin"
+	requires "consul-template.bin"
+	requires "packer.bin"
+	requires "nomad.bin"
+	requires "vault.bin"
+
+	requires "jq.bin"
+	requires "http.bin"
+
 end
