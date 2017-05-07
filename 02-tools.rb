@@ -73,6 +73,11 @@ dep "http.bin" do
 	installs "httpie"
 end
 
+# N - node.js version manager - https://github.com/tj/n
+dep "n.bin" do
+	installs "n"
+end
+
 dep "tools-all" do
 	requires "tree.bin"
 	requires "wget.bin"
@@ -91,5 +96,7 @@ dep "tools-all" do
 
 	requires "jq.bin"
 	requires "http.bin"
+
+	requires "n.bin"
 
 end

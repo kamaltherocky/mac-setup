@@ -224,6 +224,72 @@ dep "Java SDK" do
         }
 end
 
+# Java SDK
+dep "XMind" do
+        met? {
+                shell? "brew cask list xmind"
+        }
+
+        meet {
+                shell("brew cask install xmind")
+        }
+end
+
+# Gimp - Photo editing
+dep "Gimp" do
+        met? {
+                shell? "brew cask list gimp"
+        }
+
+        meet {
+                shell("brew cask install gimp")
+        }
+end
+
+# XQuartz - Inkscape dependency
+dep "Inkscape" do
+        met? {
+                shell? "brew cask list xquartz"
+        }
+
+        meet {
+                shell("brew cask install xquartz")
+        }
+end
+
+# Inkscape - Vector drawing
+dep "Inkscape" do
+        met? {
+                shell? "brew cask list inkscape"
+        }
+
+        meet {
+                shell("brew cask install inkscape")
+        }
+end
+
+# Whatsapp =- Messaging
+dep "Whatsapp" do
+        met? {
+                shell? "brew cask list whatsapp"
+        }
+
+        meet {
+                shell("brew cask install whatsapp")
+        }
+end
+
+# GPGTools
+dep "GPGTools" do
+        met? {
+                shell? "brew cask list gpgtools"
+        }
+
+        meet {
+                shell("brew cask install gpgtools")
+        }
+end
+
 # Box Notes - Collabrative Note taking app
 dep "Box Notes.app" do
 				source "https://e3.boxcdn.net/box-installers/boxnotes/mac/latest/Box%20Notes.zip"
@@ -251,8 +317,9 @@ dep "osx-apps-all" do
 	requires "Google Drive"
 	requires "Dropbox"
 
-	# --------------- Password Manager ------------------------#
+	# --------------- Security / Password Manager ------------------------#
 	requires "1Password"
+	requires "GPGTools"
 
 	# --------------- Terminal / CLI ------------------------#
 	requires "iTerm2"
@@ -279,5 +346,13 @@ dep "osx-apps-all" do
 
 	# --------------- Notes App ------------------------#
 	requires "Box Notes.app"
+	requires "XMind"
+
+	# --------------- Multimedia App ------------------------#
+	requires "Gimp"
+	requires "Inkscape"
+
+	# --------------- Messaging` App ------------------------#
+	requires "Whatsapp"
 
 end

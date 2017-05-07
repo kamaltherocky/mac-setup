@@ -9,7 +9,7 @@ we are using Babushka for the configuration management. Here are few reference a
 ## Prerequisite step
 
 -  Install XCode from AppStore
--  Accept the XCode License agreement 
+-  Accept the XCode License agreement
 ```
    sudo xcodebuild -license
 ```
@@ -24,4 +24,8 @@ we are using Babushka for the configuration management. Here are few reference a
 - Configure the Name and email address in the git configuration
 ```
    git config --global --edit
+```
+- Run the Babushka with the starting dep name
+```
+  babushka optimusprime
 ```
