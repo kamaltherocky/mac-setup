@@ -44,4 +44,62 @@ app="oh-my-zsh"
 app="fzf"
 brew list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew install $app && $(brew --prefix)/opt/fzf/install)
 
+# Install git
+app="git"
+brew list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew install $app)
 
+# Install tree
+app="tree"
+brew list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew install $app)
+
+# Install httpie
+app="httpie"
+brew list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew install $app)
+
+# Install jq
+app="jq"
+brew list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew install $app)
+
+# Install Terraform
+app="terraform"
+brew list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew install $app)
+
+# Install Packer
+app="packer"
+brew list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew install $app)
+
+# Install Docker for mac
+app="docker"
+brew cask list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew cask install $app)
+
+# Install Docker completions
+app="docker-completion"
+brew list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew install $app)
+
+# Install Docker-compose completions
+app="docker-compose-completion"
+brew list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew install $app)
+
+# Install Virtualbox
+app="virtualbox"
+brew cask list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew cask install $app)
+
+# Install Vagrant
+app="vagrant"
+brew cask list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew cask install $app)
+
+# Install Vagrant Manager
+#app="vagrant-manager"
+#brew cask list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew cask install $app)
+
+# Install Google
+app="google-cloud-sdk"
+brew cask list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew cask install $app)
+
+# pet - CLI Snippet Manager - https://github.com/knqyf263/pet  |  https://raw.githubusercontent.com/brianshumate/hashipets/master/hashipets.toml
+app="knqyf263/pet/pet"
+brew list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew install $app)
+
+# bfg - github file cleaner - https://rtyley.github.io/bfg-repo-cleaner/
+app="bfg"
+brew list $app >/dev/null 2>&1 && [ $? ] &&  printf "%-50s : [Installed]\n" $app || (printf "%-50s : [Installing...]\n" $app && brew install $app)
